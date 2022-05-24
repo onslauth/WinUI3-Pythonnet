@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WinUI3Pythonnet (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WinUI3Pythonnet (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
