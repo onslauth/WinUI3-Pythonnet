@@ -43,12 +43,12 @@ namespace WinUI3Pythonnet
             myButton.Content = "Clicked";
             Runtime.PythonDLL = "C:\\Python\\python310.dll";
 
-            //Task.Run( ( ) => this.TestPython( ) );
-
             using ( Py.GIL( ) )
             {
                 dynamic sys = Py.Import( "sys" );
             }
+
+            //Task.Run( ( ) => this.TestPython( ) );
         }
     }
 }
