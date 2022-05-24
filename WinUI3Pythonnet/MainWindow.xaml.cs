@@ -41,11 +41,14 @@ namespace WinUI3Pythonnet
         private void myButton_Click( object sender, RoutedEventArgs e )
         {
             myButton.Content = "Clicked";
-            Runtime.PythonDLL = "C:\\Python\\python310.dll";
+            Runtime.PythonDLL = "C:\\python\\python310.dll";
+            PythonEngine.Initialize( );
 
             using ( Py.GIL( ) )
             {
                 dynamic sys = Py.Import( "sys" );
+                string version = sys.version;
+                System.Diagnostics.Debug.WriteLine( "Version: {0}", version, null );
             }
 
             //Task.Run( ( ) => this.TestPython( ) );
